@@ -9,7 +9,12 @@ The grades are entered as floating point numbers from 0 to 100, and the statisti
 dotnet run
 ```
 
-## Run with argument
+### Build the project
 ```bash
-dotnet run -- Ryan
+dotnet build
+```
+
+### Install nuget packages
+```bash
+dotnet restore
 ```
