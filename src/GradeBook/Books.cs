@@ -1,7 +1,0 @@
-namespace GradeBook
-{
-      class Book
-    {
-
-    }
-}
