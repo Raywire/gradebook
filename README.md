@@ -18,3 +18,8 @@ dotnet build
 ```bash
 dotnet restore
 ```
+
+### Run the tests
+```bash
+dotnet test
+```
