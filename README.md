@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Raywire/gradebook.svg?branch=develop)](https://travis-ci.org/Raywire/gradebook)
 ### Prerequisites
 -  [.NET Core SDK](https://dotnet.microsoft.com/download)
 
