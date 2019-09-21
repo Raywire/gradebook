@@ -2,6 +2,6 @@ language: csharp
 mono: none
 dotnet: 2.2
 install:
-  - dotnet restore test/GradeBook.Tests 
+  - dotnet restore
 script:
-  - dotnet test test/GradeBook.Tests 
+  - dotnet test
