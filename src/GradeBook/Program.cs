@@ -8,15 +8,13 @@ namespace GradeBook
         {
             var book = new Book("Ryan's Grade Book");
 
-            var done = false;
-            while(!done)
+            while(true)
             {
                 System.Console.WriteLine("Enter a grade or 'q' to quit");
                 var input = Console.ReadLine();
                 if(input == "q")
                 {
-                    done = true;
-                    continue;
+                    break;
                 }
                 var grade = double.Parse(input);
                 book.AddGrade(grade);
