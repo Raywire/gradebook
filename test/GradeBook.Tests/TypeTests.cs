@@ -6,6 +6,23 @@ namespace GradeBook.Tests
     public class TypeTests
     {
         [Fact]
+        public void CSharpCanPassByReference()
+        {
+            var book1 = GetBook("Book 1");
+            // instead of 'ref' you can use 'out' keyword
+            GetBookSetName(ref book1, "New Name");
+
+            Assert.Equal("New Name", book1.Name);
+        }
+
+        private void GetBookSetName(ref Book book, string name)
+        {
+            // but with out you must initialize the output parameter 
+            // with ref the line below can be omitted but with out it is required
+            book = new Book(name);
+        }
+
+        [Fact]
         public void CSharpIsPassByValue()
         {
             var book1 = GetBook("Book 1");
