@@ -9,9 +9,9 @@ namespace GradeBook.Tests
         public void Test1()
         {
             var x = GetInt();
-            SetInt(x);
+            SetInt(ref x);
 
-            Assert.Equal(3, x);
+            Assert.Equal(42, x);
         }
 
         private int GetInt()
@@ -19,7 +19,7 @@ namespace GradeBook.Tests
             return 3;
         }
 
-        private void SetInt(int z)
+        private void SetInt(ref int z)
         {
             z = 42;
         }
