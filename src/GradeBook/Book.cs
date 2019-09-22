@@ -31,12 +31,16 @@ namespace GradeBook
         result.Average = 0.0;
         result.Highest = double.MinValue;
         result.Lowest = double.MaxValue;
-        foreach(var grade in grades) 
+
+        var index = 0;
+        do
         {
-            result.Lowest = Math.Min(grade, result.Lowest);
-            result.Highest = Math.Max(grade, result.Highest);
-            result.Average += grade;
-        }
+          result.Lowest = Math.Min(grades[index], result.Lowest);
+          result.Highest = Math.Max(grades[index], result.Highest);
+          result.Average += grades[index];
+          index += 1;
+        } while (index < grades.Count);
+
         result.Average /= grades.Count;
 
         return result;
