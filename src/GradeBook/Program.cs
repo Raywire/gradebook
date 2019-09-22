@@ -14,6 +14,7 @@
             System.Console.WriteLine($"The lowest grade is {stats.Lowest}");
             System.Console.WriteLine($"The highest grade is {stats.Highest}");
             System.Console.WriteLine($"The average grade is {stats.Average:N1}");
+            System.Console.WriteLine($"The letter grade is {stats.Letter}");
         }
     }
 }
