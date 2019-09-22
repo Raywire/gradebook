@@ -29,18 +29,9 @@ namespace GradeBook.Tests
         {
             // arrange
             var book = new Book("");
-            book.AddGrade(101.0);
-            book.AddGrade(50.7);
-            book.AddGrade(30.3);
-
-            // act
-            var result = book.GetStatistics();
 
             // assert
-            Assert.Equal(40.5, result.Average, 1);
-            Assert.Equal(50.7, result.Highest, 1);
-            Assert.Equal(30.3, result.Lowest, 1);
-            Assert.Equal('F', result.Letter);
+            Assert.Throws<ArgumentException>(() => book.AddGrade(101.0));
         }
     }
 }
