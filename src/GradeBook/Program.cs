@@ -1,20 +1,33 @@
-﻿namespace GradeBook
+﻿using System;
+
+namespace GradeBook
 {
     class Program
     {
         static void Main(string[] args)
         {
             var book = new Book("Ryan's Grade Book");
-            book.AddGrade(89.1);
-            book.AddGrade(90.5);
-            book.AddGrade(77.5);
+
+            var done = false;
+            while(!done)
+            {
+                System.Console.WriteLine("Enter a grade or 'q' to quit");
+                var input = Console.ReadLine();
+                if(input == "q")
+                {
+                    done = true;
+                    continue;
+                }
+                var grade = double.Parse(input);
+                book.AddGrade(grade);
+            }
 
             var stats = book.GetStatistics();
 
-            System.Console.WriteLine($"The lowest grade is {stats.Lowest}");
-            System.Console.WriteLine($"The highest grade is {stats.Highest}");
-            System.Console.WriteLine($"The average grade is {stats.Average:N1}");
-            System.Console.WriteLine($"The letter grade is {stats.Letter}");
+            Console.WriteLine($"The lowest grade is {stats.Lowest}");
+            Console.WriteLine($"The highest grade is {stats.Highest}");
+            Console.WriteLine($"The average grade is {stats.Average:N1}");
+            Console.WriteLine($"The letter grade is {stats.Letter}");
         }
     }
 }
