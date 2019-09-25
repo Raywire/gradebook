@@ -3,12 +3,11 @@ using System.Collections.Generic;
 
 namespace GradeBook
 {
-      public class Book
+    public class Book
     {
       //constructor
       public Book(string name)
       {
-        category = "";
         grades = new List<double>();
         Name = name;
       }
@@ -91,14 +90,16 @@ namespace GradeBook
         return result;
       }
 
+      // Field
       private List<double> grades;
 
+      // Property
       public string Name
       {
         get; set;
         // private set;
       }
 
-      readonly string category = "Science";
+      public const string CATEGORY = "Science";
     }
 }
