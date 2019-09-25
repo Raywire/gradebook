@@ -8,6 +8,7 @@ namespace GradeBook
       //constructor
       public Book(string name)
       {
+        category = "";
         grades = new List<double>();
         Name = name;
       }
@@ -95,6 +96,9 @@ namespace GradeBook
       public string Name
       {
         get; set;
+        // private set;
       }
+
+      readonly string category = "Science";
     }
 }
