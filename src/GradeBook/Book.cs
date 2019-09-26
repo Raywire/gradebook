@@ -5,7 +5,7 @@ namespace GradeBook
 {
   public delegate void GradeAddedDelegate(object sender, EventArgs args);
 
-  public class Book
+  public class Book : NamedObject
   {
     //constructor
     public Book(string name)
@@ -101,13 +101,6 @@ namespace GradeBook
 
     // Field
     private List<double> grades;
-
-    // Property
-    public string Name
-    {
-      get; set;
-      // private set;
-    }
 
     public const string CATEGORY = "Science";
   }
