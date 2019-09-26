@@ -54,6 +54,7 @@ namespace GradeBook
       }
     }
 
+    // Field
     public event GradeAddedDelegate GradeAdded;
 
     public Statistics GetStatistics()
