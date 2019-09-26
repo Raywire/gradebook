@@ -8,7 +8,8 @@ namespace GradeBook
   public class Book : NamedObject
   {
     //constructor
-    public Book(string name)
+    // base() accessing constructor of the base class
+    public Book(string name) : base(name)
     {
       grades = new List<double>();
       Name = name;
